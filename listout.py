@@ -13,9 +13,16 @@ def abstract_word(lemma):
 
 words = wn.getWordsByLang()
 
-for word in words:
-    lemma = word.lemma
-    # print(lemma)
+def listout():
+    result2 = []
+    for word in words:
+        lemma = word.lemma
+        # print(lemma)
 
-    for abst_word in abstract_word(lemma=lemma):
-        print([lemma,abst_word]) #[下位語、上位語]の形で出力
+        for abst_word in abstract_word(lemma=lemma):
+            result2.append([lemma,abst_word])
+            # print([lemma,abst_word]) #[下位語、上位語]の形で出力
+
+    return result2
+
+print(listout()) # 日本語WordNetの下位上位概念を全て出力
