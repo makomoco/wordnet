@@ -25,4 +25,7 @@ def listout():
 
     return result2
 
-print(listout()) # 日本語WordNetの下位上位概念を全て出力
+with open('WordNet_list.txt', 'w') as f:
+    print(tuple(listout()), file=f)
+
+# print(listout()) # 日本語WordNetの下位上位概念を全て出力
