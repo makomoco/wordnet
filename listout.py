@@ -1,4 +1,5 @@
 import wn
+import csv
 
 def abstract_word(lemma):
     result1 = []
@@ -25,7 +26,9 @@ def listout():
 
     return result2
 
-with open('WordNet_list.txt', 'w') as f:
-    print(listout(), file=f)
+with open('WordNet_list.csv', 'w') as f:
+    writer = csv.writer(f)
+    writer.writerows(listout())
+    # print(listout(), file=f)
 
 # print(listout()) # 日本語WordNetの下位上位概念を全て出力
