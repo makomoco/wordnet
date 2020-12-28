@@ -1,8 +1,6 @@
-train_data = [
-('Software Engineer', 'Engineer'), 
-('Senior Software Engineer', 'Software Engineer'),
-('Web Programmer', 'Programmer'),
-('UI Designer', 'Designer'),
-('エンジニア', 'Engineer'),
-('Engineer', 'エンジニア'),
-]
+Software Engineer, Engineer
+Senior Software Engineer, Software Engineer
+Web Programmer, Programmer
+UI Designer, Designer
+エンジニア, Engineer
+Engineer, エンジニア
