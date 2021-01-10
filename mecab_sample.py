@@ -1,9 +1,13 @@
-# -*- coding: utf-8 -*-
-
+# MeCabモジュールのインポート
 import MeCab
 
-sentence = 'AWSの有名なサービスにAmazon Elastic Compute Cloud (EC2) とAmazon Simple Storage Service (S3) がある。
-これまでのクライアントが保有していた物理的なサーバファームと比較してAWSは大規模な計算処理能力を速やかに提供出来ることが強みである。'
+# MeCab::Taggerクラスのインスタンスを作成（ここではデフォルト設定）
+m = MeCab.Tagger('')
 
-t = MeCab.Tagger('')
-print(t.parse(sentence))
+sentence = '鬼滅の刃の映画を見に行った。'
+
+# 日本語文章の解析処理
+ma = m.parse(sentence)
+
+# 解析結果を表示
+print(ma)
