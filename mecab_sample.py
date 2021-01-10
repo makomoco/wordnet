@@ -2,7 +2,7 @@
 import MeCab
 
 # MeCab::Taggerクラスのインスタンスを作成（ここではデフォルト設定）
-m = MeCab.Tagger('')
+m = MeCab.Tagger('-d /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd')
 
 sentence = '鬼滅の刃の映画を見に行った。'
 
