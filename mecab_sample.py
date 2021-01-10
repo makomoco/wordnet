@@ -1,9 +1,6 @@
 # MeCabモジュールのインポート
 import MeCab
 
-# mecabrcの格納場所を指定
-os.environ['MECABRC'] = "/etc/mecabrc"
-
 # MeCab::Taggerクラスのインスタンスを作成（ここではデフォルト設定）
 m = MeCab.Tagger('')
 
