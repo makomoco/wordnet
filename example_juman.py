@@ -1,4 +1,3 @@
---- example_juman.py ---
 # coding: utf-8
 from __future__ import unicode_literals # It is not necessary when you use python3.
 from pyknp import Juman
