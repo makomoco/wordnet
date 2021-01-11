@@ -9,7 +9,13 @@ with open("sentence.txt") as f:
     text = f.read()
 
 # 日本語文章の解析処理
-ma = m.parse(text)
+#ma = m.parse(text)
+
+nouns = [line for line in m.parse(text).splitlines()
+               if "名詞" in line.split()[-1]]
+
+for str in nouns:
+   print(str.split())
 
 # 解析結果を表示
-print(ma)
+#print(ma)
