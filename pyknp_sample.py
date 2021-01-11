@@ -12,4 +12,4 @@ for mrph in result.mrph_list(): # 各形態素にアクセス
             #% (mrph.midasi, mrph.yomi, mrph.genkei, mrph.hinsi, mrph.bunrui, mrph.katuyou1, mrph.katuyou2, mrph.imis, mrph.repname))
 
     if(mrph.hinsi == "名詞"):
-        print("%s" % (mrph.midashi))
+        print("%s" % (mrph.midasi))
