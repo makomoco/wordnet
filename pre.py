@@ -11,7 +11,7 @@ normalized_text = neologdn.normalize(text)
 text_without_url = re.sub(r'https?://[\w/:%#\$&\?\(\)~\.=\+\-]+', '', normalized_text)
 
 #桁区切りの除去と数字の置換
-tmp = re.sub(r'(\d)([,.])(\d+)', r'\1\3', text_without_emoji)
+tmp = re.sub(r'(\d)([,.])(\d+)', r'\1\3', text_without_url)
 text_replaced_number = re.sub(r'\d+', '0', tmp)
 
 # 半角記号の置換
