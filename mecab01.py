@@ -1,4 +1,4 @@
-import premecab
+from premecab import analysis_1, analysis_2
 
 # 要求仕様書１
 termlist1 = []
