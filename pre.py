@@ -5,7 +5,7 @@ with open("sentence.txt") as f:
 
 normalized_text = neologdn.normalize(text)
 
-with open("sentence_after.txt") as f:
+with open("sentence_after.txt", mode='w') as f:
     f.write(normalized_text)
 
 #print(normalized_text)
