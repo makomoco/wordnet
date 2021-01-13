@@ -4,7 +4,7 @@ import string
 import re
 #import xlrd
 #import xlwt
-#import numpy as np
+import numpy as np
 
 class Term:
 	def __init__(self):
