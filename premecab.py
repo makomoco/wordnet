@@ -1,4 +1,4 @@
-#import MeCab
+import MeCab
 import math
 import string
 import re
@@ -20,7 +20,7 @@ class Term:
 
 # パターンによって抽出　名詞⁺
 def analysis_1(termlist,file):
-	mecab = MeCab.Tagger('')
+	mecab = MeCab.Tagger('/usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd')
 	with open(file, 'r') as file:
 		for line in file.readlines():
 			temp_word = ''
@@ -65,7 +65,7 @@ def analysis_1(termlist,file):
 
 # パターンによって抽出　（名詞⁺）＋（を、に、から、へ）＋（サ変名詞OR動詞）
 def analysis_2(termlist,file):
-	mecab = MeCab.Tagger('')
+	mecab = MeCab.Tagger('/usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd')
 	with open(file, 'r') as file:
 		for line in file.readlines():
 			temp_word = ''
