@@ -1,5 +1,11 @@
-from parser import MecabParser
+import premecab
 
-mp =  MecabParser(word_classes=['名詞'], word_class_details=['一般','固有名詞'])
-text = '今日はお腹が空いたので近所の天下一品のラーメンを食べに来ました。'
-print(mp.parse(text))
+# 要求仕様書１
+	termlist1 = []
+	newlist1 = []
+	file1 = 'sentence_after.txt'
+	new_file1 = 'sentence_after.txt'
+	analysis_1(termlist1,new_file1)
+	#analysis_2(termlist1,new_file1)
+
+print(termlist1)
