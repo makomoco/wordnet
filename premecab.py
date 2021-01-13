@@ -20,7 +20,7 @@ class Term:
 
 # パターンによって抽出　名詞⁺
 def analysis_1(termlist,file):
-	mecab = MeCab.Tagger('/usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd')
+	mecab = MeCab.Tagger('')
 	with open(file, 'r') as file:
 		for line in file.readlines():
 			temp_word = ''
