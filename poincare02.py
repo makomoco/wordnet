@@ -7,17 +7,17 @@ import pandas as pd
 init_notebook_mode(connected=True)
 
 data = pd.read_csv('WordNet_list.csv', header=None)
-occupation_relations_list = [(a, b) for a, b in data.values]
+list_from_wordnet = [(a, b) for a, b in data.values]
 
-model = PoincareModel(occupation_relations_list, size=2, negative=8)
+model = PoincareModel(list_from_wordnet, size=2, negative=8)
 model.save('filename')
 model = PoincareModel.load('filename')
 model.train(epochs=5000)
 
-relations_set = set(occupation_relations_list)
+relations_set = set(list_from_wordnet)
 # 代表的な単語のみをラベルとして可視化する
 # major_occupation_list = ['性別','種別']
-major_occupation_list = ['話題 沸騰 ホ ゚ット GOMA 型 要求 仕様 書 ', '版 ', '胡麻 印 ', 'ほうひ ゙ん株 ', 'ト ゙キュメント ', 'こ ゙利用 ', '著作 物 ',
+list_from_POL = ['話題 沸騰 ホ ゚ット GOMA 型 要求 仕様 書 ', '版 ', '胡麻 印 ', 'ほうひ ゙ん株 ', 'ト ゙キュメント ', 'こ ゙利用 ', '著作 物 ',
                          '著作 権 ', '作成 者 ', '所属 ', '組織 ', '゙所有 ', '著作 権 法 ', '保護 ', 'SESSAME ', '著作 者 ', '利用 ', '許諾 ',
                          '゙利用 者 個人 ', '使用 許諾 ', '使用 ', '個人 以外 ', '方 ', '゙', '場合 ', 'query sessame jp ', '゙お問い合わせ ', '゙さい',
                          '゙著作 者 ', '権利 著作 物 ', '複製 ', '上演 ', '演奏 ', '公衆 送信 及 ', '゙送信 可能 化 ', '口述 ', '展示 ', '上映 及 ', '゙頒布 ',
@@ -49,5 +49,6 @@ major_occupation_list = ['話題 沸騰 ホ ゚ット GOMA 型 要求 仕様 書
                          '゙なかった場合 ', '必 ', '゙一 度 沸騰 ', '自然 ', 'なか ゙ら設定 温度 ', '•タイマ ', '最大 時間 ', '゙設定 ', '゙きます', '•ユーサ ゙', 'ホ ゙タン タイマ ', '制約 時 ', '•ユーサ ゙が設定 ', 'タイム アウト 時 ', 
                          '゙沸騰 状態 終了 時 ', '•T B D ', 'ハート ゙ウェア ', '要件 ', '゙確定 ', '゙T B D ', '要求 仕様 書 ', '教育 用 資料 ', '環境 ', '適宜 ', '制約 ', '゙いて結構 ', '発行 履歴 ', 
                          '話題 沸騰 ホ ゚ット GOMA 型 要求 仕様 書 年月日 初版 発行 ', '年月日 ', '版 発行 ']
+ls = [l for l in list_from_POL if l in relations_set] 
 figure_title = ''
-iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=major_occupation_list))
+iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=ls))
