@@ -15,7 +15,7 @@ list_from_WordNet_1 = [(a, b) for a, b in data.values]
 with open("WordNet_list.csv") as fp:
     csvList = list(csv.reader(fp))
 list_from_WordNet_2 = [item for subList in csvList for item in subList]
-# print(list_from_WordNet) 
+print(list_from_WordNet_2) 
 
 
 # ポアンカレ埋め込み学習
