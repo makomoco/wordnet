@@ -9,7 +9,7 @@ init_notebook_mode(connected=True)
 
 # タプル形式で格納
 data = pd.read_csv('WordNet_list.csv', header=None)
-list_from_wordnet_1 = [(a, b) for a, b in data.values]
+list_from_WordNet_1 = [(a, b) for a, b in data.values]
 
 # WordNet_list.csvを一次元配列（リスト）に格納
 with open("WordNet_list.csv") as fp:
