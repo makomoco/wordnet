@@ -50,5 +50,7 @@ list_from_POL = ['話題 沸騰 ホ ゚ット GOMA 型 要求 仕様 書 ', '版
                          '゙沸騰 状態 終了 時 ', '•T B D ', 'ハート ゙ウェア ', '要件 ', '゙確定 ', '゙T B D ', '要求 仕様 書 ', '教育 用 資料 ', '環境 ', '適宜 ', '制約 ', '゙いて結構 ', '発行 履歴 ', 
                          '話題 沸騰 ホ ゚ット GOMA 型 要求 仕様 書 年月日 初版 発行 ', '年月日 ', '版 発行 ']
 ls = [l for l in list_from_POL if l in relations_set] 
-figure_title = ''
-iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=ls))
+
+print(ls)
+# figure_title = ''
+# iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=ls))
