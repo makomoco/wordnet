@@ -7,14 +7,15 @@ import pandas as pd
 
 init_notebook_mode(connected=True)
 
-# data = pd.read_csv('WordNet_list.csv', header=None)
-# list_from_wordnet = [(a, b) for a, b in data.values]
+# タプル形式で格納
+data = pd.read_csv('WordNet_list.csv', header=None)
+list_from_wordnet_1 = [(a, b) for a, b in data.values]
 
 # WordNet_list.csvを一次元配列（リスト）に格納
 with open("WordNet_list.csv") as fp:
     csvList = list(csv.reader(fp))
-list_from_WordNet = [item for subList in csvList for item in subList]
-print(list_from_WordNet) 
+list_from_WordNet_2 = [item for subList in csvList for item in subList]
+# print(list_from_WordNet) 
 
 
 # ポアンカレ埋め込み学習
@@ -24,7 +25,7 @@ print(list_from_WordNet)
 # model.train(epochs=5000)
 
 # set型しか受け付けないので整形
-relations_set = set(list_from_WordNet)
+relations_set = set(list_from_WordNet_1)
 
 # ラベルとして可視化する
 list_from_POL = ['話題沸騰ホ ゚ットGOMA型要求仕様書', '版', '胡麻印', 'ほうびん株', 'ト ゙キュメント', 'こ ゙利用', '著作物',
@@ -63,6 +64,8 @@ list_from_POL = ['話題沸騰ホ ゚ットGOMA型要求仕様書', '版', '胡�
 
 ls = [l for l in list_from_POL if l in list_from_WordNet] 
 
+# WordNet内に登録されている単語のみ出力
+print('WordNet内に登録されている単語のみ出力')
 print(ls)
 # figure_title = ''
 # iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=ls))
