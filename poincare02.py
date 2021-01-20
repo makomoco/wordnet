@@ -19,12 +19,12 @@ list_from_WordNet_2 = [item for subList in csvList for item in subList]
 
 
 # ポアンカレ埋め込み学習(可視化するため２次元で学習を行う)
-model = PoincareModel(list_from_wordnet, size=2, negative=8)
+model = PoincareModel(list_from_WordNet_1, size=2, negative=8)
 model.save('filename')
 model = PoincareModel.load('filename')
 model.train(epochs=5000)
 
-# set型しか受け付けないので整形
+# 可視化ツールがset型しか受け付けないので整形
 relations_set = set(list_from_WordNet_1)
 
 # ラベルとして可視化する
