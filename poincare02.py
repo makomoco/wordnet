@@ -14,7 +14,7 @@ init_notebook_mode(connected=True)
 with open("WordNet_list.csv") as fp:
     csvList = list(csv.reader(fp))
 list_from_WordNet = [item for subList in csvList for item in subList]
-# print(flatList) 
+print(list_from_WordNet) 
 
 
 # ポアンカレ埋め込み学習
