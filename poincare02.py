@@ -2,21 +2,31 @@ from gensim.models.poincare import PoincareModel
 from gensim.viz.poincare import poincare_2d_visualization
 from IPython import display
 from plotly.offline import init_notebook_mode, iplot
+import csv
 import pandas as pd
 
 init_notebook_mode(connected=True)
 
-data = pd.read_csv('WordNet_list.csv', header=None)
-list_from_wordnet = [(a, b) for a, b in data.values]
+# data = pd.read_csv('WordNet_list.csv', header=None)
+# list_from_wordnet = [(a, b) for a, b in data.values]
 
-model = PoincareModel(list_from_wordnet, size=2, negative=8)
-model.save('filename')
-model = PoincareModel.load('filename')
-model.train(epochs=5000)
+# WordNet_list.csvを一次元配列（リスト）に格納
+with open("WordNet_list.csv") as fp:
+    csvList = list(csv.reader(fp))
+list_from_WordNet = [item for subList in csvList for item in subList]
+# print(flatList) 
 
-relations_set = set(list_from_wordnet)
-# 代表的な単語のみをラベルとして可視化する
-# major_occupation_list = ['性別','種別']
+
+# ポアンカレ埋め込み学習
+# model = PoincareModel(list_from_wordnet, size=2, negative=8)
+# model.save('filename')
+# model = PoincareModel.load('filename')
+# model.train(epochs=5000)
+
+# set型しか受け付けないので整形
+relations_set = set(list_from_WordNet)
+
+# ラベルとして可視化する
 list_from_POL = ['話題 沸騰 ホ ゚ット GOMA 型 要求 仕様 書 ', '版 ', '胡麻 印 ', 'ほうひ ゙ん株 ', 'ト ゙キュメント ', 'こ ゙利用 ', '著作 物 ',
                          '著作 権 ', '作成 者 ', '所属 ', '組織 ', '゙所有 ', '著作 権 法 ', '保護 ', 'SESSAME ', '著作 者 ', '利用 ', '許諾 ',
                          '゙利用 者 個人 ', '使用 許諾 ', '使用 ', '個人 以外 ', '方 ', '゙', '場合 ', 'query sessame jp ', '゙お問い合わせ ', '゙さい',
