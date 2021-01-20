@@ -62,7 +62,7 @@ list_from_POL = ['話題沸騰ホ ゚ットGOMA型要求仕様書', '版', '胡�
                          '゙沸騰状態終了時', '•T B D', 'ハードウェア', '要件', '゙確定', '゙T B D', '要求仕様書', '教育用資料', '環境', '適宜', '制約', '゙いて結構', '発行履歴', 
                          '話題沸騰ポットGOMA型要求仕様書年月日初版発行', '年月日', '版発行']
 
-ls = [l for l in list_from_POL if l in list_from_WordNet] 
+ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
 # WordNet内に登録されている単語のみ出力
 print('WordNet内に登録されている単語のみ出力')
