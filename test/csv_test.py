@@ -6,7 +6,7 @@ with open("aiueo.csv") as fp:
 flatList = [item for subList in csvList for item in subList]
 print(flatList)
 
-list_2 = ['あ','は']
+list_2 = ['あ','い','か','は']
 
 ls = [l for l in list_2 if l in flatList] 
 
