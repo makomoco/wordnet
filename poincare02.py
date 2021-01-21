@@ -18,7 +18,7 @@ list_from_WordNet_1 = [(a, b) for a, b in data.values]
 with open("WordNet_list.csv") as fp:
     csvList = list(csv.reader(fp))
 list_from_WordNet_2 = [item for subList in csvList for item in subList]
-# print(list_from_WordNet_2) 
+print(list_from_WordNet_2) 
 
 
 # ポアンカレ埋め込み学習(可視化するため２次元で学習を行う)
@@ -68,8 +68,8 @@ list_from_POL = ['話題沸騰ポットGOMA型要求仕様書', '版', '胡麻�
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
 # WordNet内に登録されている単語のみ出力
-print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
-print(ls)
+# print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
+# print(ls)
 
 # プロット
 # figure_title = ''
