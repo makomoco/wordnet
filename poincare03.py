@@ -23,11 +23,8 @@ list_from_WordNet_2 = [item for subList in csvList for item in subList]
 # print(list_from_WordNet_2) #テスト→正常
 
 
-# ポアンカレ埋め込み学習(可視化するため２次元で学習を行う)
-# model = PoincareModel(list_from_WordNet_1, size=2, negative=8)
-# model.save('filename')
+# モデルの読み込み
 model = PoincareModel.load('filename')
-model.train(epochs=5000)
 
 # 可視化ツールがset型しか受け付けないので整形
 relations_set = set(list_from_WordNet_1)
