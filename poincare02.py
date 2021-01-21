@@ -7,9 +7,12 @@ import pandas as pd
 
 init_notebook_mode(connected=True)
 
+# list_from_WordNet_1 学習用のリスト　タプルのリスト
+# list_from_WordNet_2 フィルタ用のリスト　一次元リスト
+
 # タプル形式で格納
 data = pd.read_csv('WordNet_list.csv', header=None)
-list_from_WordNet_1 = [(a, b) for a, b in data.values]
+list_from_WordNet_1 = [(a, b) for a, b in data.values] 
 
 # WordNet_list.csvを一次元配列（リスト）に格納
 with open("WordNet_list.csv") as fp:
@@ -19,16 +22,16 @@ list_from_WordNet_2 = [item for subList in csvList for item in subList]
 
 
 # ポアンカレ埋め込み学習(可視化するため２次元で学習を行う)
-model = PoincareModel(list_from_WordNet_1, size=2, negative=8)
-model.save('filename')
-model = PoincareModel.load('filename')
-model.train(epochs=5000)
+# model = PoincareModel(list_from_WordNet_1, size=2, negative=8)
+# model.save('filename')
+# model = PoincareModel.load('filename')
+# model.train(epochs=5000)
 
 # 可視化ツールがset型しか受け付けないので整形
 relations_set = set(list_from_WordNet_1)
 
 # ラベルとして可視化する
-list_from_POL = ['話題沸騰ホ ゚ットGOMA型要求仕様書', '版', '胡麻印', 'ほうびん株', 'ト ゙キュメント', 'こ ゙利用', '著作物',
+list_from_POL = ['話題沸騰ポットGOMA型要求仕様書', '版', '胡麻印', 'ほうびん株', 'ト ゙キュメント', 'ご利用', '著作物',
                          '著作権', '作成者', '所属', '組織', '゙所有', '著作権法', '保護', 'SESSAME', '著作者', '利用', '許諾',
                          '゙利用者個人', '使用許諾 ', '使用', '個人以外 ', '方', '゙', '場合', 'query sessame jp', '゙お問い合わせ', '゙さい',
                          '゙著作者', '権利著作物 ', '複製', '上演', '演奏', '公衆送信及', '゙送信可能化 ', '口述', '展示', '上映及', '゙頒布',
@@ -65,7 +68,9 @@ list_from_POL = ['話題沸騰ホ ゚ットGOMA型要求仕様書', '版', '胡�
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
 # WordNet内に登録されている単語のみ出力
-# print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
-# print(ls)
-figure_title = ''
-iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=ls))
+print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
+print(ls)
+
+# プロット
+# figure_title = ''
+# iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=ls))
