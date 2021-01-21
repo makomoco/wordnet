@@ -13,12 +13,13 @@ init_notebook_mode(connected=True)
 # タプル形式で格納
 data = pd.read_csv('WordNet_list.csv', header=None)
 list_from_WordNet_1 = [(a, b) for a, b in data.values] 
+print(list_from_WordNet_1)
 
 # WordNet_list.csvを一次元配列（リスト）に格納
 with open("WordNet_list.csv") as fp:
     csvList = list(csv.reader(fp))
 list_from_WordNet_2 = [item for subList in csvList for item in subList]
-print(list_from_WordNet_2) 
+# print(list_from_WordNet_2) 
 
 
 # ポアンカレ埋め込み学習(可視化するため２次元で学習を行う)
