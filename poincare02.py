@@ -13,20 +13,20 @@ init_notebook_mode(connected=True)
 # タプル形式で格納
 data = pd.read_csv('WordNet_list.csv', header=None)
 list_from_WordNet_1 = [(a, b) for a, b in data.values] 
-print(list_from_WordNet_1)
+# print(list_from_WordNet_1) #テスト→正常
 
 # WordNet_list.csvを一次元配列（リスト）に格納
 with open("WordNet_list.csv") as fp:
     csvList = list(csv.reader(fp))
 list_from_WordNet_2 = [item for subList in csvList for item in subList]
-# print(list_from_WordNet_2) 
+# print(list_from_WordNet_2) #テスト→正常
 
 
 # ポアンカレ埋め込み学習(可視化するため２次元で学習を行う)
-# model = PoincareModel(list_from_WordNet_1, size=2, negative=8)
-# model.save('filename')
-# model = PoincareModel.load('filename')
-# model.train(epochs=5000)
+model = PoincareModel(list_from_WordNet_1, size=2, negative=8)
+model.save('filename')
+model = PoincareModel.load('filename')
+model.train(epochs=5000)
 
 # 可視化ツールがset型しか受け付けないので整形
 relations_set = set(list_from_WordNet_1)
@@ -70,8 +70,8 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 
 # WordNet内に登録されている単語のみ出力
 # print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
-# print(ls)
+# print(ls) #テスト→正常
 
 # プロット
-# figure_title = ''
-# iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=ls))
+figure_title = ''
+iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=ls))
