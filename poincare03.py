@@ -133,7 +133,7 @@ for i in distance_list:
     else:
         count += 1
 
-print('%sより下位語を出力します', &ex_word)    
+print('%sより下位語を出力します' % ex_word)    
 print(kaigo)
 
 
