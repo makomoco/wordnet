@@ -118,8 +118,8 @@ distance_and_word_list_sorted = sorted(distance_and_word_list)
 count_1 = 0 # カウント用
 ex_word = '安全'
 for i in distance_and_word_list_sorted:
-    if distance_and_word_list_sorted[count][1] == ex_word:
-        dis = distance_and_word_list_sorted[count][0] # ex_wordの距離出力
+    if distance_and_word_list_sorted[count_1][1] == ex_word:
+        dis = distance_and_word_list_sorted[count_1][0] # ex_wordの距離出力
         break
     else:
         count += 1
@@ -127,11 +127,11 @@ for i in distance_and_word_list_sorted:
 kaigo = []
 count_2 = 0
 for i in distance_list:
-    if distance_and_word_list_sorted[count][0] >= dis:
-        kaigo.append(distance_and_word_list_sorted[count][1])
-        count += 1
+    if distance_and_word_list_sorted[count_2][0] >= dis:
+        kaigo.append(distance_and_word_list_sorted[count_2][1])
+        count_2 += 1
     else:
-        count += 1
+        count_2 += 1
 
 print('%sより下位語を出力します' % ex_word)    
 print(kaigo)
