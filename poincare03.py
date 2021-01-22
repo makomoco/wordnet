@@ -88,8 +88,6 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 
 for l in ls:
     c = model.kv[l]
-    Veclist_1 = list.append(c)
-
-Veclist_2 = Veclist_1.tolist()
+    Veclist_1 = np.append(c)
 
 ptint(Veclist_2)
