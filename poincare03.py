@@ -87,9 +87,9 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 # print(numpy.linalg.norm(b))
 
 Veclist_1 = []
+d = []
 
 for l in ls:
     c = model.kv[l]
-    Veclist_2 = np.append(c, Veclist_1, axis=0)
-
-print(Veclist_2)
+    d = c.tolist()
+    print(d)
