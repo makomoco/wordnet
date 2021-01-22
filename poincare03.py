@@ -93,8 +93,11 @@ for l in ls:
 print('ベクトル結果表示')
 print(e)
 
+distance_list = []
+
 # 距離計算
 for l in ls:
     c_2 = model.kv[l]
-    d_2 = np.linalg.norm(c_2)
-    print(d_2)
+    distance = np.linalg.norm(c_2) # ls内の全単語について原点からの距離を計算
+    distance_list.append(distance)
+    print(distance_list)
