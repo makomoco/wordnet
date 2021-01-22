@@ -103,7 +103,6 @@ for l in ls:
     distance = np.linalg.norm(c_2) # ls内の全単語について原点からの距離を計算
     distance_list.append(distance)
     distance_list.append(l)
-    f.append(distance_list)
 
 print('距離表示')
-print(f)
+print(distance_list)
