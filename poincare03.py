@@ -92,4 +92,4 @@ for l in ls:
     c = model.kv[l]
     Veclist_2 = np.append(Veclist_1, c)
 
-ptint(Veclist_2)
+print(Veclist_2)
