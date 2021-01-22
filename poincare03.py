@@ -84,4 +84,4 @@ print(b)
 print(numpy.linalg.norm(a))
 print(numpy.linalg.norm(b))
 
-c = [model.kv[l for l in ls]]
+c = model.kv[l for l in ls]
