@@ -74,4 +74,4 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 # figure_title = ''
 # iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=ls))
 
-print(model.kv['エラー'])
+print(model.kv.x['エラー'])
