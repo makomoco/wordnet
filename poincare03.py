@@ -92,6 +92,6 @@ e = []
 for l in ls:
     c = model.kv[l]
     d = c.tolist() # リストに変換
-    e = list.append(d)
+    e.append(d)
 
 print(e)
