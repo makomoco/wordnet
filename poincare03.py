@@ -100,4 +100,6 @@ for l in ls:
     c_2 = model.kv[l]
     distance = np.linalg.norm(c_2) # ls内の全単語について原点からの距離を計算
     distance_list.append(distance)
-    print(distance_list)
+
+print('距離表示')
+print(distance_list)
