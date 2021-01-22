@@ -117,12 +117,12 @@ distance_and_word_list_sorted = sorted(distance_and_word_list)
 # ある単語の全ての下位語を表示
 i = 0 # カウント用
 ex_word = '安全'
-for i in distance_and_word_list_sorted:
-    if distance_and_word_list_sorted[i][1:1] == ex_word:
-        dis = distance_and_word_list_sorted[i][0:0] # 距離出力
+for j in distance_and_word_list_sorted:
+    if distance_and_word_list_sorted[i][1] == ex_word:
+        dis = distance_and_word_list_sorted[i][0] # 距離出力
         break
     else:
-        continue
+        i += 1
 
 print(dis)
 
