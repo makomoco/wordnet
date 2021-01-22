@@ -140,7 +140,7 @@ print(kaigo)
 # ある単語の全ての上位語を出力
 jouigo = []
 count_3 = 0
-for i in distance_and_word_list_sorted:
+for j in distance_and_word_list_sorted:
     if distance_and_word_list_sorted[count_3][0] <= dis:
         kaigo.append(distance_and_word_list_sorted[count_3][1])
         count_3 += 1
