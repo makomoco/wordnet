@@ -126,7 +126,7 @@ for i in distance_and_word_list_sorted:
 
 kaigo = []
 count_2 = 0
-for i in distance_list:
+for i in distance_and_word_list_sorted:
     if distance_and_word_list_sorted[count_2][0] >= dis:
         kaigo.append(distance_and_word_list_sorted[count_2][1])
         count_2 += 1
