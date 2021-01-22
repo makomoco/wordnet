@@ -90,6 +90,6 @@ Veclist_1 = []
 
 for l in ls:
     c = model.kv[l]
-    Veclist_2 = np.append(Veclist_1, c)
+    Veclist_2 = np.append(c, Veclist_1, axis=0)
 
 print(Veclist_2)
