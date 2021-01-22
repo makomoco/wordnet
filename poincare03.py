@@ -4,6 +4,7 @@ from IPython import display
 from plotly.offline import init_notebook_mode, iplot
 import csv
 import pandas as pd
+import numpy
 
 init_notebook_mode(connected=True)
 
