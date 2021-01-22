@@ -93,9 +93,9 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 # print('ベクトル結果表示')
 # print(e)
 
-# distance_list = []
-# distance_and_word_list = []
-# f = []
+distance_list = []
+distance_and_word_list = []
+
 
 # 距離計算
 for l in ls:
