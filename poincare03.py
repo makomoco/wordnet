@@ -86,10 +86,12 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 # print(numpy.linalg.norm(a))
 # print(numpy.linalg.norm(b))
 
-Veclist_1 = []
 d = []
+e = []
 
 for l in ls:
     c = model.kv[l]
-    d = c.tolist()
-    print(d)
+    d = c.tolist() # リストに変換
+    e = list.append(d)
+
+print(e)
