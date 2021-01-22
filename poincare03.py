@@ -96,5 +96,5 @@ print(e)
 # 距離計算
 for l in ls:
     c_2 = model.kv[l]
-    d_2 = numpy.linalg.norm(c_2)
+    d_2 = np.linalg.norm(c_2)
     print(d_2)
