@@ -122,7 +122,7 @@ for i in distance_and_word_list_sorted:
         dis = distance_and_word_list_sorted[count_1][0] # ex_wordの距離出力
         break
     else:
-        count += 1
+        count_1 += 1
 
 # ある単語の全ての下位語を出力
 kaigo = []
