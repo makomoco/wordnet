@@ -104,5 +104,8 @@ for l in ls:
     distance_list = [distance, l]
     distance_and_word_list.append(distance_list)
 
-print('距離表示')
-print(distance_and_word_list)
+
+# print('距離表示')
+# print(distance_and_word_list)
+
+print(sorted(distance_and_word_list))
