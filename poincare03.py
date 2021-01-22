@@ -169,3 +169,8 @@ l3_l2_and = set(ls) & set(correct_n)
 l3_l2_and_list = list(l3_l2_and)
 print('lsとフィーチャー図で一致している名詞を出力')
 print(l3_l2_and_list)
+
+l4_l2_and = set(list_from_WordNet_2) & set(correct_n)
+l4_l2_and_list = list(l4_l2_and)
+print('WordNet内の単語とフィーチャー図で一致している名詞を出力')
+print(l4_l2_and_list)
