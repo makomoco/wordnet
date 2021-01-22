@@ -86,7 +86,7 @@ e = [] # ls内の全単語に関して[x,y,'単語']の形でリスト化
 
 for l in ls:
     c_1 = model.kv[l] # ベクトル化
-    d = c.tolist() # リストに変換
+    d = c_1.tolist() # リストに変換
     d.append(l) # [x,y,'単語']の形で保存
     e.append(d)
 
