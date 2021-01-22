@@ -108,4 +108,5 @@ for l in ls:
 # print('距離表示')
 # print(distance_and_word_list)
 
+print('ソートした結果を表示')
 print(sorted(distance_and_word_list))
