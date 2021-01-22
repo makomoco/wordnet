@@ -88,10 +88,12 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 
 d = []
 e = []
+f = []
 
 for l in ls:
     c = model.kv[l]
     d = c.tolist() # リストに変換
-    e.append(d)
+    e = l.append()
+    f.append(e)
 
-print(e)
+print(f)
