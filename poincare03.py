@@ -76,24 +76,25 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 # iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=ls))
 
 
-
-# a = model.kv['エラー']
-# print(a)
-
-# b = model.kv['版']
-# print(b)
-
 # print(numpy.linalg.norm(a))
 # print(numpy.linalg.norm(b))
 
-d = []
-e = []
-f = []
+
+# ベクトル表示
+d = []　# リスト変換用
+e = []　# ls内の全単語に関して[x,y,'単語']の形でリスト化
 
 for l in ls:
-    c = model.kv[l]
+    c_1 = model.kv[l]　# ベクトル化
     d = c.tolist() # リストに変換
-    d.extend(l)
+    d.append(l) # [x,y,'単語']の形で保存
     e.append(d)
 
+print('ベクトル結果表示')
 print(e)
+
+# 距離計算
+for l in ls:
+    c_2 = model.kv[l]
+    d_2 = numpy.linalg.norm(c_2)
+    print(d_2)
