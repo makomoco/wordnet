@@ -142,7 +142,7 @@ jouigo = []
 count_3 = 0
 for j in distance_and_word_list_sorted:
     if distance_and_word_list_sorted[count_3][0] <= dis:
-        kaigo.append(distance_and_word_list_sorted[count_3][1])
+        jouigo.append(distance_and_word_list_sorted[count_3][1])
         count_3 += 1
     else:
         count_3 += 1
