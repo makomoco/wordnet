@@ -115,38 +115,57 @@ distance_and_word_list_sorted = sorted(distance_and_word_list)
 
 
 # 指定した単語の距離を出力
-count_1 = 0 # カウント用
-ex_word = 'ソフトウェア'
-for i in distance_and_word_list_sorted:
-    if distance_and_word_list_sorted[count_1][1] == ex_word:
-        dis = distance_and_word_list_sorted[count_1][0] # ex_wordの距離出力
-        break
-    else:
-        count_1 += 1
+# count_1 = 0 # カウント用
+# ex_word = 'ソフトウェア'
+# for i in distance_and_word_list_sorted:
+#     if distance_and_word_list_sorted[count_1][1] == ex_word:
+#         dis = distance_and_word_list_sorted[count_1][0] # ex_wordの距離出力
+#         break
+#     else:
+#         count_1 += 1
 
 # ある単語の全ての下位語を出力
-kaigo = []
-count_2 = 0
-for i in distance_and_word_list_sorted:
-    if distance_and_word_list_sorted[count_2][0] >= dis:
-        kaigo.append(distance_and_word_list_sorted[count_2][1])
-        count_2 += 1
-    else:
-        count_2 += 1
+# kaigo = []
+# count_2 = 0
+# for i in distance_and_word_list_sorted:
+#     if distance_and_word_list_sorted[count_2][0] >= dis:
+#         kaigo.append(distance_and_word_list_sorted[count_2][1])
+#         count_2 += 1
+#     else:
+#         count_2 += 1
 
-print('「%s」より下位語を出力します' % ex_word)    
-print(kaigo)
+# print('「%s」より下位語を出力します' % ex_word)    
+# print(kaigo)
 
 # ある単語の全ての上位語を出力
-jouigo = []
-count_3 = 0
-for j in distance_and_word_list_sorted:
-    if distance_and_word_list_sorted[count_3][0] <= dis:
-        jouigo.append(distance_and_word_list_sorted[count_3][1])
-        count_3 += 1
-    else:
-        count_3 += 1
+# jouigo = []
+# count_3 = 0
+# for j in distance_and_word_list_sorted:
+#     if distance_and_word_list_sorted[count_3][0] <= dis:
+#         jouigo.append(distance_and_word_list_sorted[count_3][1])
+#         count_3 += 1
+#     else:
+#         count_3 += 1
 
-print('「%s」より上位語を出力します' % ex_word)
-print(jouigo)
+# print('「%s」より上位語を出力します' % ex_word)
+# print(jouigo)
 
+
+# 名詞がどれほど抽出できているか
+# 正解のフーチャー図に記載されているクラス名
+correct_n =['給湯','給湯制御表示','給湯ボタン','給湯ロック/解除ボタン','状態表示','ロックランプ','給湯','ポンプ',
+            '温度制御','温度制御指示','保温設定ボタン','沸騰ボタン','温度制御方式','PID制御方式','温度制御テーブル方式','目標温度ON/OFF','沸騰','保温','高温モード','節約モード','ミルクモード','センサ','サーミスタ','蓋センサ',
+            '状態表示','保温ランプ','沸騰ランプ','温度表示','モード表示','加熱','ヒータ','ヒータ電源',
+            '水位検知','水位メータ','第N水位センサ','満水センサ',
+            'エラー検知','高温エラー','温度上がらずエラー','温度上がらずエラー',
+            'キッチンタイマ','タイマ起動','1分追加','タイマボタン','タイマ残り時間表示']
+
+l1_l2_and = set(list_from_POL) & set(correct_n)
+l1_l2_and_list = list(l1_l2_and)
+print('POLとフィーチャー図で一致している名詞を出力')
+print(l1_l2_and_list)
+
+l3_l2_and = set(ls) & set(correct_n)
+l3_l2_and_list = list(l3_l2_and)
+print('lsとフィーチャー図で一致している名詞を出力')
+print(l3_l2_and_list)
