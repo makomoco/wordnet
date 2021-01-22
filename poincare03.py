@@ -81,5 +81,5 @@ print(a)
 b = model.kv['版']
 print(b)
 
-numpy.linalg.norm(a)
-numpy.linalg.norm(b)
+print('エラー　の距離は　%d' & numpy.linalg.norm(a))
+print('版　の距離は　%d' & numpy.linalg.norm(b))
