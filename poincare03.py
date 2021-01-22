@@ -114,9 +114,9 @@ distance_and_word_list_sorted = sorted(distance_and_word_list)
 # print(sorted(distance_and_word_list))
 
 
-# ある単語の全ての下位語を表示
+# 指定した単語の距離を出力
 count_1 = 0 # カウント用
-ex_word = '安全'
+ex_word = 'ソフトウェア'
 for i in distance_and_word_list_sorted:
     if distance_and_word_list_sorted[count_1][1] == ex_word:
         dis = distance_and_word_list_sorted[count_1][0] # ex_wordの距離出力
@@ -124,6 +124,7 @@ for i in distance_and_word_list_sorted:
     else:
         count += 1
 
+# ある単語の全ての下位語を出力
 kaigo = []
 count_2 = 0
 for i in distance_and_word_list_sorted:
@@ -133,7 +134,19 @@ for i in distance_and_word_list_sorted:
     else:
         count_2 += 1
 
-print('%sより下位語を出力します' % ex_word)    
+print('「%s」より下位語を出力します' % ex_word)    
 print(kaigo)
 
+# ある単語の全ての上位語を出力
+jouigo = []
+count_3 = 0
+for i in distance_and_word_list_sorted:
+    if distance_and_word_list_sorted[count_3][0] <= dis:
+        kaigo.append(distance_and_word_list_sorted[count_3][1])
+        count_3 += 1
+    else:
+        count_3 += 1
+
+print('「%s」より上位語を出力します' % ex_word)
+print(jouigo)
 
