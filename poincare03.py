@@ -81,8 +81,8 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 
 
 # ベクトル表示
-d = []　# リスト変換用
-e = []　# ls内の全単語に関して[x,y,'単語']の形でリスト化
+d = [] # リスト変換用
+e = [] # ls内の全単語に関して[x,y,'単語']の形でリスト化
 
 for l in ls:
     c_1 = model.kv[l]　# ベクトル化
