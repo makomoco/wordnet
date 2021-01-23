@@ -172,7 +172,7 @@ correct_n_list = list(correct_n_set)
 print('lsを出力(要素数は%d)' % len(ls))
 print(ls)
 
-print('フィーチャー図を出力(要素数は%d)' % len{correct_n_list})
+print('フィーチャー図を出力(要素数は%d)' % len(correct_n_list))
 print(correct_n_list)
 
 # l1_l2_and = set(list_from_POL) & set(correct_n_list)
