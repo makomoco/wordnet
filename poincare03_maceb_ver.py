@@ -136,7 +136,7 @@ for l in l3_l2_and_list:
     c_2 = model.kv[l]
     distance = np.linalg.norm(c_2) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
                                     # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
-    d_p = 1 + 2 * ((distance**) / (1 - (distance**2))) #arccoshの中身
+    d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
     distance_p = np.arccosh(d_p) # ポアンカレ距離
     distance_list = [distance_p, l]
     distance_and_word_list.append(distance_list)
