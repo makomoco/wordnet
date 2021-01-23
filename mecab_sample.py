@@ -15,7 +15,10 @@ with open("sentence_after_zu.txt") as f:
 # 濁点処理
 text = unicodedata.normalize('NFC', text)
 
-nouns = [line for line in m.parse(text).splitlines()
+# nouns = [line for line in m.parse(text).splitlines()
+#                if "名詞" in line.split()[-1]]
+
+nouns = [line.split()[0] for line in m.parse(text).splitlines()
                if "名詞" in line.split()[-1]]
 
 for str in nouns:
