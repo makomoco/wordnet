@@ -25,8 +25,10 @@ nouns_s = set(nouns)
 
 nouns_l = list(nouns_s)
 
-for str in nouns_l:
-   print(str.split())
+# for str in nouns_l:
+#    print(str.split())
+
+print(nouns_l)
 
 # 解析結果を表示
 #print(ma)
