@@ -21,7 +21,11 @@ text = unicodedata.normalize('NFC', text)
 nouns = [line.split()[0] for line in m.parse(text).splitlines()
                if "名詞" in line.split()[-1]]
 
-for str in nouns:
+nouns_s = set(nouns)
+
+nouns_l = list(nouns_s)
+
+for str in nouns_l:
    print(str.split())
 
 # 解析結果を表示
