@@ -137,6 +137,8 @@ for l in l3_l2_and_list:
     c_2 = model.kv[l]
     distance = np.linalg.norm(c_2) # l3_l2_and_list内の全単語について原点からの距離を計算
     d_p = 1 + 2 * ((1 - (distance**2)) / distance**2)
+    print(d_p)
+    break
     distance_p = math.acos(d_p)# ポアンカレ距離
     distance_list = [distance_p, l]
     distance_and_word_list.append(distance_list)
