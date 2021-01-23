@@ -71,6 +71,7 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 # print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
 # print(ls) #テスト→正常
 
+##########################
 # プロット
 # figure_title = ''
 # iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=ls))
@@ -79,7 +80,7 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 # print(numpy.linalg.norm(a))
 # print(numpy.linalg.norm(b))
 
-
+###########################
 # # ベクトル表示
 # d = [] # リスト変換用
 # e = [] # ls内の全単語に関して[x,y,'単語']の形でリスト化
@@ -97,7 +98,7 @@ distance_list = []
 distance_and_word_list = []
 distance_and_word_list_sorted = [] # distance_and_word_list_sorted[i][j] i:距離 j:単語
 
-
+############################
 # 距離計算
 for l in ls:
     c_2 = model.kv[l]
@@ -113,7 +114,7 @@ for l in ls:
 distance_and_word_list_sorted = sorted(distance_and_word_list)
 # print(sorted(distance_and_word_list))
 
-
+######################
 # 指定した単語の距離を出力
 # count_1 = 0 # カウント用
 # ex_word = 'ソフトウェア'
@@ -124,6 +125,7 @@ distance_and_word_list_sorted = sorted(distance_and_word_list)
 #     else:
 #         count_1 += 1
 
+#########################
 # ある単語の全ての下位語を出力
 # kaigo = []
 # count_2 = 0
@@ -137,6 +139,7 @@ distance_and_word_list_sorted = sorted(distance_and_word_list)
 # print('「%s」より下位語を出力します' % ex_word)    
 # print(kaigo)
 
+#########################
 # ある単語の全ての上位語を出力
 # jouigo = []
 # count_3 = 0
@@ -150,7 +153,7 @@ distance_and_word_list_sorted = sorted(distance_and_word_list)
 # print('「%s」より上位語を出力します' % ex_word)
 # print(jouigo)
 
-
+###########################
 # 名詞がどれほど抽出できているか
 # 正解のフーチャー図に記載されているクラス名
 # correct_n =['給湯','給湯制御表示','給湯ボタン','給湯ロック/解除ボタン','状態表示','ロックランプ','給湯','ポンプ',
@@ -160,20 +163,23 @@ distance_and_word_list_sorted = sorted(distance_and_word_list)
 #             'エラー検知','高温エラー','温度上がらずエラー','温度上がらずエラー',
 #             'キッチンタイマ','タイマ起動','1分追加','タイマボタン','タイマ残り時間表示']
 
+#####################################################
 # フィーチャー図内の単語を形態素解析（ただのMecab）にかけたもの
 correct_n = ['話題','沸騰','ポット','ver','給湯','給湯','制御','指示','給湯','ボタン','給湯','ロック','解除','ボタン','状態','表示','ロック','ランプ','給湯','ポンプ','温度','制御','温度','制御','指示','保温','設定','ボタン','沸騰','ボタン','温度','制御','方式','PID制御','方式','温度','制御','テーブル','方式','目標','温度','沸騰','保温','高温','モード','節約','モード','ミルク','モード','センサ','サーミスタ','蓋','センサ','状態','表示','保温','ランプ','沸騰','ランプ','温度','表示','モード','表示','加熱','ヒータ','ヒータ','電源','水位','検知','水位','メータ','N','水位','センサ','満水','センサ','エラー','検知','高温','エラー','温度','エラー','キッチン','タイマ','タイマ','起動','分','追加','タイマ','ボタン','タイマ','残り','時間','表示']
+correct_n_set = set(correct_n) # 重複削除
+correct_n_list = list(correct_n_set)
 
-l1_l2_and = set(list_from_POL) & set(correct_n)
+l1_l2_and = set(list_from_POL) & set(correct_n_list)
 l1_l2_and_list = list(l1_l2_and)
 print('POLとフィーチャー図で一致している名詞を出力')
 print(l1_l2_and_list)
 
-l3_l2_and = set(ls) & set(correct_n)
+l3_l2_and = set(ls) & set(correct_list)
 l3_l2_and_list = list(l3_l2_and)
 print('lsとフィーチャー図で一致している名詞を出力')
 print(l3_l2_and_list)
 
-l4_l2_and = set(list_from_WordNet_2) & set(correct_n)
+l4_l2_and = set(list_from_WordNet_2) & set(correct_list)
 l4_l2_and_list = list(l4_l2_and)
 print('WordNet内の単語とフィーチャー図で一致している名詞を出力')
 print(l4_l2_and_list)
