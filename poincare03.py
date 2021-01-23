@@ -169,17 +169,23 @@ correct_n = ['話題','沸騰','ポット','ver','給湯','給湯','制御','指
 correct_n_set = set(correct_n) # 重複削除
 correct_n_list = list(correct_n_set)
 
-l1_l2_and = set(list_from_POL) & set(correct_n_list)
-l1_l2_and_list = list(l1_l2_and)
-print('POLとフィーチャー図で一致している名詞を出力')
-print(l1_l2_and_list)
+print('lsを出力')
+print(ls)
+
+print('フィーチャー図を出力')
+print(correct_n_list)
+
+# l1_l2_and = set(list_from_POL) & set(correct_n_list)
+# l1_l2_and_list = list(l1_l2_and)
+# print('POLとフィーチャー図で一致している名詞を出力')
+# print(l1_l2_and_list)
 
 l3_l2_and = set(ls) & set(correct_n_list)
 l3_l2_and_list = list(l3_l2_and)
 print('lsとフィーチャー図で一致している名詞を出力')
 print(l3_l2_and_list)
 
-l4_l2_and = set(list_from_WordNet_2) & set(correct_n_list)
-l4_l2_and_list = list(l4_l2_and)
-print('WordNet内の単語とフィーチャー図で一致している名詞を出力')
-print(l4_l2_and_list)
+# l4_l2_and = set(list_from_WordNet_2) & set(correct_n_list)
+# l4_l2_and_list = list(l4_l2_and)
+# print('WordNet内の単語とフィーチャー図で一致している名詞を出力')
+# print(l4_l2_and_list)
