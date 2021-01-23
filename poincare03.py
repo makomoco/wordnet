@@ -30,7 +30,7 @@ model = PoincareModel.load('filename')
 # 可視化ツールがset型しか受け付けないので整形
 relations_set = set(list_from_WordNet_1)
 
-# ラベルとして可視化する
+# ラベルとして可視化する(xiaoさんのアルゴリズムで抽出した名詞)
 list_from_POL = ['話題沸騰ポットGOMA型要求仕様書', '版', '胡麻印', 'ほうびん株', 'ト ゙キュメント', 'ご利用', '著作物',
                          '著作権', '作成者', '所属', '組織', '゙所有', '著作権法', '保護', 'SESSAME', '著作者', '利用', '許諾',
                          '゙利用者個人', '使用許諾 ', '使用', '個人以外 ', '方', '゙', '場合', 'query sessame jp', '゙お問い合わせ', '゙さい',
@@ -174,6 +174,9 @@ print(ls)
 
 print('フィーチャー図を出力(要素数は%d)' % len(correct_n_list))
 print(correct_n_list)
+
+###############################3
+# 一致している要素を出力
 
 # l1_l2_and = set(list_from_POL) & set(correct_n_list)
 # l1_l2_and_list = list(l1_l2_and)
