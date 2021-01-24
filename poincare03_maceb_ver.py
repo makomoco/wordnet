@@ -86,9 +86,11 @@ list_from_POL = ['単位', '時間', '要求', 'n', '秒', '一', 'dE', 'ため'
 
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
+print(model.kv['話題'])
+
 # WordNet内に登録されている単語のみ出力
-print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
-print(ls) #テスト→正常
+# print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
+# print(ls) #テスト→正常
 
 ##########################
 # プロット
@@ -111,11 +113,11 @@ correct_n = ['話題','沸騰','ポット','ver','給湯','給湯','制御','指
 correct_n_set = set(correct_n) # 重複削除
 correct_n_list = list(correct_n_set)
 
-print('lsを出力(要素数は%d)' % len(ls))
-print(ls)
+# print('lsを出力(要素数は%d)' % len(ls))
+# print(ls)
 
-print('フィーチャー図を出力(要素数は%d)' % len(correct_n_list))
-print(correct_n_list)
+# print('フィーチャー図を出力(要素数は%d)' % len(correct_n_list))
+# print(correct_n_list)
 
 ###############################3
 # 一致している要素を出力
@@ -125,10 +127,10 @@ print(correct_n_list)
 # print('POLとフィーチャー図で一致している名詞を出力')
 # print(l1_l2_and_list)
 
-l3_l2_and = set(ls) & set(correct_n_list)
-l3_l2_and_list = list(l3_l2_and)
-print('lsとフィーチャー図で一致している名詞を出力(要素数は%d)' % len(l3_l2_and_list))
-print(l3_l2_and_list)
+# l3_l2_and = set(ls) & set(correct_n_list)
+# l3_l2_and_list = list(l3_l2_and)
+# print('lsとフィーチャー図で一致している名詞を出力(要素数は%d)' % len(l3_l2_and_list))
+# print(l3_l2_and_list)
 
 # l4_l2_and = set(list_from_WordNet_2) & set(correct_n_list)
 # l4_l2_and_list = list(l4_l2_and)
@@ -159,24 +161,22 @@ distance_and_word_list_sorted = [] # distance_and_word_list_sorted[i][j] i:距�
 
 ############################
 # 距離計算
-for l in l3_l2_and_list:
-    c_2 = model.kv[l]
-    distance = np.linalg.norm(c_2) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
-                                    # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
-    d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
-    distance_p = np.arccosh(d_p) # ポアンカレ距離
-    distance_list = [distance_p, l]
-    distance_and_word_list.append(distance_list)
+# for l in l3_l2_and_list:
+#     c_2 = model.kv[l]
+#     distance = np.linalg.norm(c_2) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
+#                                     # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
+#     d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
+#     distance_p = np.arccosh(d_p) # ポアンカレ距離
+#     distance_list = [distance_p, l]
+#     distance_and_word_list.append(distance_list)
 
 
 # print('距離表示')
 # print(distance_and_word_list)
 
-print('ソートした結果を表示')
-distance_and_word_list_sorted = sorted(distance_and_word_list)
-print(sorted(distance_and_word_list))
-
-print('ボタン' in  l3_l2_and_list)
+# print('ソートした結果を表示')
+# distance_and_word_list_sorted = sorted(distance_and_word_list)
+# print(sorted(distance_and_word_list))
 
 ######################
 # 指定した単語の距離を出力
