@@ -86,8 +86,9 @@ list_from_POL = ['単位', '時間', '要求', 'n', '秒', '一', 'dE', 'ため'
 
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
-str_1 = input()
-print(model.kv[%s] % str_1)
+print(model.kv['状態'])
+print(model.kv['表示'])
+print(model.kv['ロックランプ'])
 
 # WordNet内に登録されている単語のみ出力
 # print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
