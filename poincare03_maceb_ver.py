@@ -87,32 +87,32 @@ list_from_POL = ['単位', '時間', '要求', 'n', '秒', '一', 'dE', 'ため'
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
 # 複合語の平均ベクトルを求める
-aa_1 = model.kv['温度']
-aa_2 = model.kv['制御']
-aa_3 = model.kv['テーブル']
-aa_4 = model.kv['方式']
+aa_1 = model.kv['ポンプ']
+# # aa_2 = model.kv['制御']
+# # aa_3 = model.kv['テーブル']
+# # aa_4 = model.kv['方式']
 
-bb_1 = aa_1.tolist()
-bb_2 = aa_2.tolist()
-bb_3 = aa_3.tolist()
-bb_4 = aa_4.tolist()
+# bb_1 = aa_1.tolist()
+# # bb_2 = aa_2.tolist()
+# # bb_3 = aa_3.tolist()
+# # bb_4 = aa_4.tolist()
 
-avg_x = (bb_1[0] + bb_2[0] + bb_3[0] + bb_4[0]) / 4
-avg_y = (bb_1[1] + bb_2[1] + bb_3[1] + bb_4[1]) / 4
+# avg_x = (bb_1[0] + bb_2[0] + bb_3[0] + bb_4[0]) / 4
+# avg_y = (bb_1[1] + bb_2[1] + bb_3[1] + bb_4[1]) / 4
 
-avg = [avg_x,avg_y]
+# avg = [avg_x,avg_y]
 
-print('平均ベクトルを算出')
-print(avg)
+# print('平均ベクトルを算出')
+# print(avg)
 
-# np配列化
-avg_np = np.array(avg)
-print(avg_np)
-# 距離計算
-distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
-                                    # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
-d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
-distance_p = np.arccosh(d_p) 
+# # np配列化
+# avg_np = np.array(avg)
+# print(avg_np)
+# # 距離計算
+# distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
+#                                     # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
+# d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
+distance_p = np.arccosh(aa_1) 
 print('距離を出力')
 print(distance_p)
 
