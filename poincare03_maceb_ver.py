@@ -232,6 +232,7 @@ distance_and_word_list_sorted = sorted(distance_and_word_list_hukugougo)
 print(sorted(distance_and_word_list_hukugougo))
 
 print('キッチン' in list_from_WordNet_2)
+print('キッチン' in ls)
 
 ######################
 # 指定した単語の距離を出力
