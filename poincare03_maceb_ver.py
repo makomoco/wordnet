@@ -87,14 +87,16 @@ list_from_POL = ['単位', '時間', '要求', 'n', '秒', '一', 'dE', 'ため'
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
 # 複合語の平均ベクトルを求める
-aa_1 = model.kv['エラー']
-aa_2 = model.kv['検知']
+aa_1 = model.kv['温度']
+aa_2 = model.kv['制御']
+aa_3 = model.kv['方式']
 
 bb_1 = aa_1.tolist()
 bb_2 = aa_2.tolist()
+bb_3 = aa_3.tolist()
 
-avg_x = (bb_1[0] + bb_2[0]) / 2
-avg_y = (bb_1[1] + bb_2[1]) / 2
+avg_x = (bb_1[0] + bb_2[0] + bb_3[0]) / 3
+avg_y = (bb_1[1] + bb_2[1] + bb_3[1]) / 3
 
 avg = [avg_x,avg_y]
 
