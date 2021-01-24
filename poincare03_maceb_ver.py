@@ -87,8 +87,8 @@ list_from_POL = ['単位', '時間', '要求', 'n', '秒', '一', 'dE', 'ため'
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
 # 複合語の平均ベクトルを求める
-aa_1 = model.kv['分']
-aa_2 = model.kv['追加']
+aa_1 = model.kv['水位']
+aa_2 = model.kv['検知']
 
 bb_1 = aa_1.tolist()
 bb_2 = aa_2.tolist()
