@@ -88,7 +88,8 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 
 print(model.kv['状態'])
 print(model.kv['表示'])
-print(model.kv['ロックランプ'])
+print(model.kv['ロック'])
+print(model.kv['ランプ'])
 
 # WordNet内に登録されている単語のみ出力
 # print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
