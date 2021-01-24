@@ -18,7 +18,7 @@ text_replaced_number = re.sub(r'\d+', '', tmp)
 tmp = re.sub(r'[!-/:-@[-`{-~]', r' ', text_replaced_number)
 
 # 全角記号の置換 (ここでは0x25A0 - 0x266Fのブロックのみを除去)
-text_removed_symbol = re.sub(u'[■-♯]', '、', tmp)
+text_removed_symbol = re.sub(u'[・■-♯]', '、', tmp)
 
 with open("sentence_after.txt", mode='w') as f:
     f.write(text_removed_symbol)
