@@ -90,7 +90,7 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 # bbb = aaa.tolist()
 # print(bbb)
 
-print(model.kv['温度'])
+print(model.kv['制御'])
 
 
 # WordNet内に登録されている単語のみ出力
