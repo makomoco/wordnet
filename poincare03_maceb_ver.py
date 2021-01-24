@@ -88,7 +88,7 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 
 # 複合語の平均ベクトルを求める
 aa_1 = model.kv['水位']
-aa_2 = model.kv['メータ']
+aa_2 = model.kv['センサ']
 
 bb_1 = aa_1.tolist()
 bb_2 = aa_2.tolist()
