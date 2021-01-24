@@ -86,12 +86,6 @@ list_from_POL = ['単位', '時間', '要求', 'n', '秒', '一', 'dE', 'ため'
 
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
-# aaa = model.kv['温度']
-# bbb = aaa.tolist()
-# print(bbb)
-
-print(model.kv['ボタン'])
-
 
 # WordNet内に登録されている単語のみ出力
 # print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
@@ -132,8 +126,8 @@ correct_n_list = list(correct_n_set)
 # print('POLとフィーチャー図で一致している名詞を出力')
 # print(l1_l2_and_list)
 
-# l3_l2_and = set(ls) & set(correct_n_list)
-# l3_l2_and_list = list(l3_l2_and)
+l3_l2_and = set(ls) & set(correct_n_list)
+l3_l2_and_list = list(l3_l2_and)
 # print('lsとフィーチャー図で一致している名詞を出力(要素数は%d)' % len(l3_l2_and_list))
 # print(l3_l2_and_list)
 
@@ -151,14 +145,14 @@ correct_n_list = list(correct_n_set)
 # d = [] # リスト変換用
 # e = [] # ls内の全単語に関して[x,y,'単語']の形でリスト化
 
-# for l in ls:
-#     c_1 = model.kv[l] # ベクトル化
-#     d = c_1.tolist() # リストに変換
-#     d.append(l) # [x,y,'単語']の形で保存
-#     e.append(d)
+for l in l3_l2_and_list:
+    c_1 = model.kv[l] # ベクトル化
+    d = c_1.tolist() # リストに変換
+    d.append(l) # [x,y,'単語']の形で保存
+    e.append(d)
 
-# print('ベクトル結果表示')
-# print(e)
+print('ベクトル結果表示')
+print(e)
 
 distance_list = []
 distance_and_word_list = []
