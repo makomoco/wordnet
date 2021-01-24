@@ -149,7 +149,7 @@ print('ソートした結果を表示')
 distance_and_word_list_sorted = sorted(distance_and_word_list)
 print(sorted(distance_and_word_list))
 
-print('指示' in  l3_l2_and_list)
+print('ボタン' in  l3_l2_and_list)
 
 ######################
 # 指定した単語の距離を出力
