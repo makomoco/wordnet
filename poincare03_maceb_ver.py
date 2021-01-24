@@ -92,7 +92,7 @@ aa_1 = model.kv['ポンプ']
 # # aa_3 = model.kv['テーブル']
 # # aa_4 = model.kv['方式']
 
- bb_1 = aa_1.tolist()
+bb_1 = aa_1.tolist()
 # # bb_2 = aa_2.tolist()
 # # bb_3 = aa_3.tolist()
 # # bb_4 = aa_4.tolist()
