@@ -101,9 +101,17 @@ avg = [avg_x,avg_y]
 print('平均ベクトルを算出')
 print(avg)
 
-# aaa = model.kv['ポット']
-# bbb = aaa.tolist()
-# print(bbb)
+# np配列化
+avg_np = np.array(avg)
+print(avg_np)
+# 距離計算
+distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
+                                    # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
+d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
+distance_p = np.arccosh(d_p) 
+print('距離を出力')
+print(distance_p)
+
 
 # WordNet内に登録されている単語のみ出力
 # print('話題沸騰ポッド内の単語でWordNet内に登録されている単語のみ出力')
@@ -160,17 +168,17 @@ l3_l2_and_list = list(l3_l2_and)
 
 ###########################
 # # ベクトル表示
-d = [] # リスト変換用
-e = [] # ls内の全単語に関して[x,y,'単語']の形でリスト化
+# d = [] # リスト変換用
+# e = [] # ls内の全単語に関して[x,y,'単語']の形でリスト化
 
-for l in l3_l2_and_list:
-    c_1 = model.kv[l] # ベクトル化
-    d = c_1.tolist() # リストに変換
-    d.append(l) # [x,y,'単語']の形で保存
-    e.append(d)
+# for l in l3_l2_and_list:
+#     c_1 = model.kv[l] # ベクトル化
+#     d = c_1.tolist() # リストに変換
+#     d.append(l) # [x,y,'単語']の形で保存
+#     e.append(d)
 
-print('ベクトル結果表示')
-print(e)
+# print('ベクトル結果表示')
+# print(e)
 
 distance_list = []
 distance_and_word_list = []
