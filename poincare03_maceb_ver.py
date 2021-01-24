@@ -215,7 +215,7 @@ distance_and_word_list_hukugougo = [[0.7861080035099905,'状態表示'],
                                     [0.43173430373722466,'蓋センサ'],
                                     [2.452639002585924,'沸騰ランプ'],
                                     [1.2457106114917664,'温度表示'],
-                                    [1.4750406678625425,'モード表示']
+                                    [1.4750406678625425,'モード表示'],
                                     [10.52386588053033,'加熱'],
                                     [1.151991689681557,'水位検知'],
                                     [0.009690482362774486,'水位メータ'],
@@ -229,7 +229,7 @@ distance_and_word_list_hukugougo = [[0.7861080035099905,'状態表示'],
 
 print('ソートした結果を表示')
 distance_and_word_list_sorted = sorted(distance_and_word_list_hukugougo)
-print(sorted(distance_and_word_list))
+print(sorted(distance_and_word_list_hukugougo))
 
 ######################
 # 指定した単語の距離を出力
