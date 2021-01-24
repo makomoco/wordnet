@@ -86,9 +86,11 @@ list_from_POL = ['単位', '時間', '要求', 'n', '秒', '一', 'dE', 'ため'
 
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
-aaa = model.kv['温度']
-bbb = aaa.tolist()
-print(bbb)
+# aaa = model.kv['温度']
+# bbb = aaa.tolist()
+# print(bbb)
+
+print(model.kv['温度'])
 
 
 # WordNet内に登録されている単語のみ出力
