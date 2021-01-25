@@ -6,8 +6,8 @@ text = '今日は1個1,５００円もするおいしーーーいモンブラン
 #全角・半角の統一と重ね表現の除去 (neologdn)
 normalized_text = neologdn.normalize(text)
 
-# #URLの除去
-# text_without_url = re.sub(r'https?://[\w/:%#\$&\?\(\)~\.=\+\-]+', '', normalized_text)
+#URLの除去
+text_without_url = re.sub(r'https?://[\w/:%#\$&\?\(\)~\.=\+\-]+', '', normalized_text)
 
 # #桁区切りの除去と数字の置換
 # tmp = re.sub(r'(\d)([,.])(\d+)', r'\1\3', text_without_url)
@@ -22,4 +22,4 @@ normalized_text = neologdn.normalize(text)
 # with open("sentence_after.txt", mode='w') as f:
 #     f.write(text_removed_symbol)
 
-print(normalized_text)
+print(text_without_url)
