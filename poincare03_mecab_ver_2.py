@@ -101,6 +101,12 @@ result_222 = list(set(list_form_POL_2) - unl)
 print('POL2との差分')
 print(result_222)
 
+# 結果
+# POLとの差分
+# ['Edt', '年月日']
+# POL2との差分
+# ['年', '日', '月']　→　特に影響なし？
+
 
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
