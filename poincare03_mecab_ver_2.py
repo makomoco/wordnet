@@ -87,6 +87,13 @@ list_form_POL_2 = ['水量', '使用', '指定', 'こと', '水温', 'C', '量',
 print(len(list_from_POL))
 print(len(list_form_POL_2))
 
+
+unl = set(list_from_POL) & set(list_form_POL_2)
+unl_list = list(unl)
+print('POLとPOL_2で一致している名詞を出力')
+print(unl_list)
+print(len(unl_list))
+
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
 ##########################################
