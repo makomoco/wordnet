@@ -94,6 +94,14 @@ print('POLとPOL_2で一致している名詞を出力')
 print(unl_list)
 print(len(unl_list))
 
+result_111 = list(set(list_from_POL) - unl)
+print(POLとの差分)
+print(result_111)
+result_222 = list(set(list_from_POL_2) - unl)
+print(POL2との差分)
+print(result_222)
+
+
 ls = [l for l in list_from_POL if l in list_from_WordNet_2] 
 
 ##########################################
