@@ -95,10 +95,10 @@ print(unl_list)
 print(len(unl_list))
 
 result_111 = list(set(list_from_POL) - unl)
-print(POLとの差分)
+print('POLとの差分')
 print(result_111)
 result_222 = list(set(list_from_POL_2) - unl)
-print(POL2との差分)
+print('POL2との差分')
 print(result_222)
 
 
