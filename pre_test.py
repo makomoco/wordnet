@@ -1,7 +1,7 @@
 import neologdn
 import re
 
-text = '今日は、おいしーーーいモンブランを食べました。1個５00円もしました。'
+text = '今日は1個1,５００円もするおいしーーーいモンブランを食べました！！！　詳細はこちら　https://hogehoge.html'
 
 #全角・半角の統一と重ね表現の除去 (neologdn)
 normalized_text = neologdn.normalize(text)
