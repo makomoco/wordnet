@@ -11,7 +11,7 @@ text_without_url = re.sub(r'https?://[\w/:%#\$&\?\(\)~\.=\+\-]+', '', normalized
 
 #桁区切りの除去と数字の置換
 tmp = re.sub(r'(\d)([,.])(\d+)', r'\1\3', text_without_url)
-text_replaced_number = re.sub(r'\d+', '', tmp)
+text_replaced_number = re.sub(r'\d+', ' ', tmp)
 
 # # 半角記号の置換
 # tmp = re.sub(r'[!-/:-@[-`{-~•]', r' ', text_replaced_number)
