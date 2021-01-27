@@ -30,3 +30,6 @@ list_from_WordNet_2 = [item for subList in csvList for item in subList]
 model = PoincareModel(list_from_WordNet_1, size=5, negative=8)
 model.train(epochs=5000)
 model.save('filename_5')
+
+# 終了報告
+print('done') 
