@@ -8,3 +8,5 @@ x1 = X[1]
 x2 = X[2]
 
 print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x0), evaluate.vector_normalized(x1)))
+
+print(evaluate.cosine_similarity(x0,x1))
