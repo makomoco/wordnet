@@ -49,11 +49,6 @@ x20 = X[20] # エラー検知
 x21 = X[21] # 高温エラー
 x22 = X[22] # 分追加
 
-print('x0:', x0, 'x1:', x1, 'x2:',x2)
 
-
-# 正規化
-print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x0), evaluate.vector_normalized(x1)))
-
-# 未正規化
-print(evaluate.cosine_similarity(x0,x1))
+# コサイン類似度（正規化）
+print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x3), evaluate.vector_normalized(x5)))
