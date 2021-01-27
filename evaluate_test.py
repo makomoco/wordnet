@@ -80,9 +80,9 @@ cos_sim_para = []
 for l in cos_sim_l:
     if cos_sim_l[i][0] >= 0.8:
         cos_sim_para.append(l)
-        i +=
+        i = i + 1
     else:
-        i +=
+        i = i + 1
 
 
 print(cos_sim_para)
