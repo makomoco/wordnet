@@ -74,3 +74,12 @@ cos_sim_l = [[0.9619423890352065,('状態表示','ロックランプ')],
              [0.9999539132401888,('エラー検知','高温エラー')]]
 
 print(sorted(cos_sim_l))
+
+i = 0
+cos_sim_0.8 = []
+for l in cos_sim_l:
+    if cos_sim_l[i][0] >= 0.8:
+        cos_sim_0.8.append(l)
+
+print(cos_sim_0.8)
+        
