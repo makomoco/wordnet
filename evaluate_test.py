@@ -51,4 +51,4 @@ x22 = X[22] # 分追加
 
 
 # コサイン類似度（正規化）
-print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x5), evaluate.vector_normalized(x6)))
+print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x11), evaluate.vector_normalized(x12)))
