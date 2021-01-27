@@ -7,4 +7,4 @@ x0 = X[0]
 x1 = X[1]
 x2 = X[2]
 
-print(cosine_similarity_normalized(vector_normalized(x0), vector_normalized(x1)))
+print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x0), evaluate.vector_normalized(x1)))
