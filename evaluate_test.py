@@ -53,7 +53,7 @@ x22 = X[22] # 分追加
 # # コサイン類似度（正規化）
 # print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x20), evaluate.vector_normalized(x21)))
 
-コサイン類似度結果(上位語,下位語)
+# コサイン類似度結果(上位語,下位語)
 cos_sim_l = [[0.9619423890352065,(状態表示,ロックランプ)],
              [0.35428148826605155,(温度制御,沸騰ボタン)],
              [0.9100618774256413,(温度制御,温度制御方式)],
@@ -73,4 +73,4 @@ cos_sim_l = [[0.9619423890352065,(状態表示,ロックランプ)],
              [-0.6465811801880053,(水位検知,水位センサ)],
              [0.9999539132401888,(エラー検知,高温エラー)]]
 
-cos_sim_l_s = sorted(cos_sim_l)
+print(cos_sim_l_s = sorted(cos_sim_l))
