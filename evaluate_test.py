@@ -76,10 +76,10 @@ cos_sim_l = [[0.9619423890352065,('状態表示','ロックランプ')],
 print(sorted(cos_sim_l))
 
 i = 0
-cos_sim_0.8 = []
+cos_sim_para = []
 for l in cos_sim_l:
     if cos_sim_l[i][0] >= 0.8:
-        cos_sim_0.8.append(l)
+        cos_sim_para.append(l)
 
-print(cos_sim_0.8)
+print(cos_sim_para)
         
