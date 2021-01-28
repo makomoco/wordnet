@@ -93,7 +93,7 @@ aa_2 = model.kv['表示']
 
 bb_1 = aa_1.tolist()
 bb_2 = aa_2.tolist()
-bb_3 = aa_3.tolist()
+# bb_3 = aa_3.tolist()
 # bb_4 = aa_4.tolist()
 
 avg_x1 = (bb_1[0] + bb_2[0]) / 2

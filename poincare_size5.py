@@ -33,3 +33,5 @@ model.save('filename_5')
 
 # 終了報告
 print('done') 
+
+# 完了済
