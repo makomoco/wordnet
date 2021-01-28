@@ -86,21 +86,21 @@ l3_l2_and_list = list(l3_l2_and)
 
 ############################
 # 複合語の５次元平均ベクトルを求める
-aa_1 = model.kv['温度']
-aa_2 = model.kv['制御']
-aa_3 = model.kv['テーブル']
-aa_4 = model.kv['方式']
+aa_1 = model.kv['ポンプ']
+# aa_2 = model.kv['制御']
+# aa_3 = model.kv['テーブル']
+# aa_4 = model.kv['方式']
 
 bb_1 = aa_1.tolist()
-bb_2 = aa_2.tolist()
-bb_3 = aa_3.tolist()
-bb_4 = aa_4.tolist()
+# bb_2 = aa_2.tolist()
+# bb_3 = aa_3.tolist()
+# bb_4 = aa_4.tolist()
 
-avg_x1 = (bb_1[0] + bb_2[0] + bb_3[0] + bb_4[0]) / 4
-avg_x2 = (bb_1[1] + bb_2[1] + bb_3[1] + bb_4[1]) / 4
-avg_x3 = (bb_1[2] + bb_2[2] + bb_3[2] + bb_4[2]) / 4
-avg_x4 = (bb_1[3] + bb_2[3] + bb_3[3] + bb_4[3]) / 4
-avg_x5 = (bb_1[4] + bb_2[4] + bb_3[4] + bb_4[4]) / 4
+avg_x1 = (bb_1[0]) / 1
+avg_x2 = (bb_1[1]) / 1
+avg_x3 = (bb_1[2]) / 1
+avg_x4 = (bb_1[3]) / 1
+avg_x5 = (bb_1[4]) / 1
 
 avg = [avg_x1,avg_x2,avg_x3,avg_x4,avg_x5]
 
