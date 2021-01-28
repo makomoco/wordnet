@@ -86,8 +86,8 @@ l3_l2_and_list = list(l3_l2_and)
 
 ############################
 # 複合語の５次元平均ベクトルを求める
-aa_1 = model.kv['状態']
-aa_2 = model.kv['表示']
+aa_1 = model.kv['ロック']
+aa_2 = model.kv['ランプ']
 # aa_3 = model.kv['テーブル']
 # aa_4 = model.kv['方式']
 
@@ -109,7 +109,7 @@ print(avg)
 
 # np配列化
 avg_np = np.array(avg)
-print(avg_np)
+# print(avg_np)
 # 距離計算
 distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
                                     # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
