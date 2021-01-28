@@ -86,21 +86,21 @@ l3_l2_and_list = list(l3_l2_and)
 
 ############################
 # 複合語の５次元平均ベクトルを求める
-aa_1 = model.kv['分']
-aa_2 = model.kv['追加']
-# aa_3 = model.kv['テーブル']
+aa_1 = model.kv['状態']
+aa_2 = model.kv['表示']
+# aa_3 = model.kv['方式']
 # aa_4 = model.kv['方式']
 
 bb_1 = aa_1.tolist()
 bb_2 = aa_2.tolist()
-# bb_3 = aa_3.tolist()
+bb_3 = aa_3.tolist()
 # bb_4 = aa_4.tolist()
 
-avg_x1 = (bb_1[0] + bb_2[0]) / 4
-avg_x2 = (bb_1[1] + bb_2[1]) / 4
-avg_x3 = (bb_1[2] + bb_2[2]) / 4
-avg_x4 = (bb_1[3] + bb_2[3]) / 4
-avg_x5 = (bb_1[4] + bb_2[4]) / 4
+avg_x1 = (bb_1[0] + bb_2[0]) / 2
+avg_x2 = (bb_1[1] + bb_2[1]) / 2
+avg_x3 = (bb_1[2] + bb_2[2]) / 2
+avg_x4 = (bb_1[3] + bb_2[3]) / 2
+avg_x5 = (bb_1[4] + bb_2[4]) / 2
 
 avg = [avg_x1,avg_x2,avg_x3,avg_x4,avg_x5]
 
