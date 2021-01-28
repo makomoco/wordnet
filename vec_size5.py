@@ -72,15 +72,39 @@ l3_l2_and_list = list(l3_l2_and)
 
 ###########################
 #５次元ベクトル表示
-d = [] # リスト変換用
-e = [] # 内の全単語に関して[x1,x2,x3,x4,x5,'単語']の形でリスト化
+# d = [] # リスト変換用
+# e = [] # 内の全単語に関して[x1,x2,x3,x4,x5,'単語']の形でリスト化
 
-for l in l3_l2_and_list:
-    c_1 = model.kv[l] # ベクトル化
-    d = c_1.tolist() # リストに変換
-    d.append(l) # [x1,x2,x3,x4,x5,'単語']の形で保存
-    e.append(d)
+# for l in l3_l2_and_list:
+#     c_1 = model.kv[l] # ベクトル化
+#     d = c_1.tolist() # リストに変換
+#     d.append(l) # [x1,x2,x3,x4,x5,'単語']の形で保存
+#     e.append(d)
 
-print('ベクトル結果表示')
-print(e)
+# print('ベクトル結果表示')
+# print(e)
+
+############################
+# 複合語の５次元平均ベクトルを求める
+aa_1 = model.kv['状態']
+aa_2 = model.kv['表示']
+# aa_3 = model.kv['テーブル']
+# aa_4 = model.kv['方式']
+
+bb_1 = aa_1.tolist()
+bb_2 = aa_2.tolist()
+# bb_3 = aa_3.tolist()
+# bb_4 = aa_4.tolist()
+
+avg_x1 = (bb_1[0] + bb_2[0]) / 4
+avg_x2 = (bb_1[1] + bb_2[1]) / 4
+avg_x3 = (bb_1[2] + bb_2[2]) / 4
+avg_x4 = (bb_1[3] + bb_2[3]) / 4
+avg_x5 = (bb_1[4] + bb_2[4]) / 4
+
+avg = [avg_x1,avg_x2,avg_x3,avg_x4,avg_x5]
+
+print('平均ベクトルを算出')
+print(avg)
+
 
