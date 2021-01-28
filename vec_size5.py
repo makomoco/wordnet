@@ -107,4 +107,15 @@ avg = [avg_x1,avg_x2,avg_x3,avg_x4,avg_x5]
 print('平均ベクトルを算出')
 print(avg)
 
+# np配列化
+avg_np = np.array(avg)
+print(avg_np)
+距離計算
+distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
+                                    # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
+d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
+distance_p = np.arccosh(d_p) 
+print('距離を出力')
+print(distance_p)
+
 
