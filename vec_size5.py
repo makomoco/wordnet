@@ -86,8 +86,8 @@ l3_l2_and_list = list(l3_l2_and)
 
 ############################
 # 複合語の５次元平均ベクトルを求める
-aa_1 = model.kv['エラー']
-aa_2 = model.kv['検知']
+aa_1 = model.kv['高温']
+aa_2 = model.kv['エラー']
 # aa_3 = model.kv['方式']
 # aa_4 = model.kv['方式']
 
