@@ -86,36 +86,36 @@ l3_l2_and_list = list(l3_l2_and)
 
 ############################
 # 複合語の５次元平均ベクトルを求める
-aa_1 = model.kv['加熱']
+# aa_1 = model.kv['加熱']
 # aa_2 = model.kv['制御']
 # aa_3 = model.kv['テーブル']
 # aa_4 = model.kv['方式']
 
-bb_1 = aa_1.tolist()
+# bb_1 = aa_1.tolist()
 # bb_2 = aa_2.tolist()
 # bb_3 = aa_3.tolist()
 # bb_4 = aa_4.tolist()
 
-avg_x1 = (bb_1[0]) / 1
-avg_x2 = (bb_1[1]) / 1
-avg_x3 = (bb_1[2]) / 1
-avg_x4 = (bb_1[3]) / 1
-avg_x5 = (bb_1[4]) / 1
+# avg_x1 = (bb_1[0]) / 1
+# avg_x2 = (bb_1[1]) / 1
+# avg_x3 = (bb_1[2]) / 1
+# avg_x4 = (bb_1[3]) / 1
+# avg_x5 = (bb_1[4]) / 1
 
-avg = [avg_x1,avg_x2,avg_x3,avg_x4,avg_x5]
+# avg = [avg_x1,avg_x2,avg_x3,avg_x4,avg_x5]
 
-print('平均ベクトルを算出')
-print(avg)
+# print('平均ベクトルを算出')
+# print(avg)
 
-# np配列化
-avg_np = np.array(avg)
+# # np配列化
+# avg_np = np.array(avg)
 # print(avg_np)
-# 距離計算
-distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
-                                    # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
-d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
-distance_p = np.arccosh(d_p) 
-print('距離を出力')
-print(distance_p)
+# # 距離計算
+# distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
+#                                     # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
+# d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
+# distance_p = np.arccosh(d_p) 
+# print('距離を出力')
+# print(distance_p)
 
 
