@@ -132,4 +132,16 @@ cc_2 = bb_2 / np.linalg.norm(aa_2)
 
 w_w1_w2 =  [cc_1[0]+cc_2[0],cc_1[1]+cc_2[1],cc_1[2]+cc_2[2],cc_1[3]+cc_2[3],cc_1[4]+cc_2[4]]
 
+print('複合語ベクトルを出力')
 print(w_w1_w2)
+
+# np配列化
+avg_np = np.array(w_w1_w2)
+print(avg_np)
+# 距離計算
+distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
+                                     # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
+d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
+distance_p = np.arccosh(d_p) 
+print('距離を出力')
+print(distance_p)
