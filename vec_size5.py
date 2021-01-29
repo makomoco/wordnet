@@ -130,6 +130,9 @@ bb_2 = aa_2.tolist()
 cc_1 = bb_1[0] / np.linalg.norm(aa_1)
 cc_2 = bb_2[0] / np.linalg.norm(aa_2)
 
-w_w1_w2 =  cc_1 + cc_2
+dd_1 = cc_1.tolist()
+dd_2 = cc_2.tolist()
+
+w_w1_w2 =  dd_1 + dd_2
 
 print(w_w1_w2)
