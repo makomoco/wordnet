@@ -127,8 +127,8 @@ aa_2 = model.kv['表示']
 bb_1 = aa_1.tolist()
 bb_2 = aa_2.tolist()
 
-cc_1 = bb_1[0] / np.linalg.norm(aa_1)
-cc_2 = bb_2[0] / np.linalg.norm(aa_2)
+cc_1 = bb_1 / np.linalg.norm(aa_1)
+cc_2 = bb_2 / np.linalg.norm(aa_2)
 
 dd_1 = cc_1.tolist()
 dd_2 = cc_2.tolist()
