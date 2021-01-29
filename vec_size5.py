@@ -118,4 +118,18 @@ l3_l2_and_list = list(l3_l2_and)
 # print('距離を出力')
 # print(distance_p)
 
+# 複合語新処理(v(w1,w2)=w1/|w1| + w2/|w2|)
+aa_1 = model.kv['状態']
+aa_2 = model.kv['表示']
+# aa_3 = model.kv['テーブル']
+# aa_4 = model.kv['方式']
+
+bb_1 = aa_1.tolist()
+bb_2 = aa_2.tolist()
+
+print(bb_1)
+print(np.array(aa_1))
+
+cc_1 = bb_1[0] / np.linalg.norm(aa_1)
+cc_2 = bb_2[0] / np.linalg.norm(bb_1)
 
