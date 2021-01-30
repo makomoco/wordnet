@@ -24,7 +24,7 @@ model = PoincareModel.load('filename')
 relations_set = set(list_from_WordNet_1)
 
 # ラベルとして可視化する
-example_words = ['物性','高温','温度']
+example_words = ['温度','物性','高温']
 
 # プロット
 figure_title = ''
