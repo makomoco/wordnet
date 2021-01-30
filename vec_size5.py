@@ -145,8 +145,8 @@ distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原
 # ノルムが１以上の際は、ベクトル/ノルムを行う
 if distance > 1:
     w_w1_w2_2 = w_w1_w2 / distance
-    print(w_w1_w2_2)
-    avg_np_2 = np.array(w_w1_w2_2)
+    print(w_w1_w2_2.tolist())
+    avg_np_2 = np.array(w_w1_w2_2.tolist())
     print(avg_np_2)
     distance_2 = np.linalg.norm(avg_np_2)
     print('distance_2 =')
