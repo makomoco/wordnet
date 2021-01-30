@@ -167,7 +167,7 @@ else:
 #     print('distance_2 =')
 #     print(distance_2)   
 
-d_p = 1 + 2 * ((distance_3**2) / (1 - (distance_3**2))) #arccoshの中身
+d_p = 1 + 2 * ((distance_2**2) / (1 - (distance_2**2))) #arccoshの中身
 print(d_p)
 distance_p = np.arccosh(d_p) 
 print('距離を出力')
