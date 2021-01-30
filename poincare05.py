@@ -6,11 +6,15 @@ import csv
 import pandas as pd
 import numpy as np
 
+import matplotlib.pyplot as plt
+
 init_notebook_mode(connected=True)
 
 # list_from_WordNet_1 学習用のリスト　タプルのリスト
 # list_from_WordNet_2 フィルタ用のリスト　一次元リスト
 # relations_set プロット用
+
+fig = plt.figure()
 
 # タプル形式で格納
 data = pd.read_csv('WordNet_list.csv', header=None)
@@ -29,3 +33,5 @@ example_words = ['温度','物性','高温']
 # プロット
 figure_title = ''
 iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=example_words))
+
+fig.savefig("img.png")
