@@ -156,7 +156,7 @@ else:
     print(distance)
 
 if distance_2 >= 1:
-    w_w1_w2_3 = w_w1_w2 / distance_2
+    w_w1_w2_3 = w_w1_w2_2 / distance_2
     print(w_w1_w2_3.tolist())
     avg_np_3 = np.array(w_w1_w2_3.tolist())
     print(avg_np_3)
