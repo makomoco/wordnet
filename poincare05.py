@@ -28,4 +28,4 @@ example_words = ['沸騰','高温','水位']
 
 # プロット
 figure_title = ''
-iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=example_words)
+iplot(poincare_2d_visualization(model, relations_set, figure_title, num_nodes=None, show_node_labels=example_words))
