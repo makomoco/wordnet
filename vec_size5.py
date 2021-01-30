@@ -155,8 +155,8 @@ else:
     print('distance =')
     print(distance)
 
-# d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
-# print(d_p)
-# distance_p = np.arccosh(d_p) 
-# print('距離を出力')
-# print(distance_p)
+d_p = 1 + 2 * ((distance_2**2) / (1 - (distance_2**2))) #arccoshの中身
+print(d_p)
+distance_p = np.arccosh(d_p) 
+print('距離を出力')
+print(distance_p)
