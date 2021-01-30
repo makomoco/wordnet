@@ -119,8 +119,8 @@ l3_l2_and_list = list(l3_l2_and)
 # print(distance_p)
 
 # 複合語新処理(v(w1,w2)=w1/|w1| + w2/|w2|)
-aa_1 = model.kv['状態']
-aa_2 = model.kv['表示']
+aa_1 = model.kv['ロック']
+aa_2 = model.kv['ランプ']
 # aa_3 = model.kv['テーブル']
 # aa_4 = model.kv['方式']
 
@@ -155,17 +155,17 @@ else:
     print('distance =')
     print(distance)
 
-if distance_2 >= 1:
-    w_w1_w2_3 = w_w1_w2_2 / distance_2
-    print(w_w1_w2_3.tolist())
-    avg_np_3 = np.array(w_w1_w2_3.tolist())
-    print(avg_np_3)
-    distance_3 = np.linalg.norm(avg_np_3)
-    print('distance_3 =')
-    print(distance_3)  
-else:
-    print('distance_2 =')
-    print(distance_2)   
+# if distance_2 >= 1:
+#     w_w1_w2_3 = w_w1_w2_2 / distance_2
+#     print(w_w1_w2_3.tolist())
+#     avg_np_3 = np.array(w_w1_w2_3.tolist())
+#     print(avg_np_3)
+#     distance_3 = np.linalg.norm(avg_np_3)
+#     print('distance_3 =')
+#     print(distance_3)  
+# else:
+#     print('distance_2 =')
+#     print(distance_2)   
 
 d_p = 1 + 2 * ((distance_3**2) / (1 - (distance_3**2))) #arccoshの中身
 print(d_p)
