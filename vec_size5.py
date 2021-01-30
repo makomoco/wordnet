@@ -141,9 +141,20 @@ avg_np = np.array(w_w1_w2)
 # 距離計算
 distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
                                      # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
-print(distance)
-d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
-print(d_p)
+
+# ノルムが１以上の際は、ベクトル/ノルムを行う
+if distance > 1:
+    w_w1_w2_2 = w_w1_w2 / distance
+    abg_np_2 = np.array(w_w1_w2_2)
+    distance_2 = np.linalg.norm(avg_np_2)
+    print('distance_2 =')
+    print(distance_2)
+else:
+    print('distance =')
+    print(distance)
+
+# d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
+# print(d_p)
 # distance_p = np.arccosh(d_p) 
 # print('距離を出力')
 # print(distance_p)
