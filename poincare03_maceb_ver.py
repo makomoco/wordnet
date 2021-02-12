@@ -88,39 +88,39 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 
 ##########################################
 # 複合語の平均ベクトルを求める
-aa_1 = model.kv['電源']
-# aa_2 = model.kv['残り']
-# aa_3 = model.kv['時間']
-# # aa_4 = model.kv['方式']
+aa_1 = model.kv['タイマー']
+aa_2 = model.kv['残り']
+aa_3 = model.kv['時間']
+aa_4 = model.kv['表示']
 
 bb_1 = aa_1.tolist()
-# bb_2 = aa_2.tolist()
-# bb_3 = aa_3.tolist()
-# # bb_4 = aa_4.tolist()
+bb_2 = aa_2.tolist()
+bb_3 = aa_3.tolist()
+bb_4 = aa_4.tolist()
 
-print(bb_1)
+# print(bb_1)
 # print(bb_2)
 # print(bb_3)
 
 
-# avg_x = (bb_1[0] + bb_2[0] + bb_3[0] + bb_4[0]) / 4
-# avg_y = (bb_1[1] + bb_2[1] + bb_3[1] + bb_4[1]) / 4
+avg_x = (bb_1[0] + bb_2[0] + bb_3[0] + bb_4[0]) / 4
+avg_y = (bb_1[1] + bb_2[1] + bb_3[1] + bb_4[1]) / 4
 
-# avg = [avg_x,avg_y]
+avg = [avg_x,avg_y]
 
-# print('平均ベクトルを算出')
-# print(avg)
+print('平均ベクトルを算出')
+print(avg)
 
-# # np配列化
-# avg_np = np.array(avg)
-# print(avg_np)
+# np配列化
+avg_np = np.array(avg)
+print(avg_np)
 # 距離計算
-# distance = np.linalg.norm(avd_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
-#                                     # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
-# d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
-# distance_p = np.arccosh(d_p) 
-# print('距離を出力')
-# print(distance_p)
+distance = np.linalg.norm(avd_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
+                                    # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
+d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
+distance_p = np.arccosh(d_p) 
+print('距離を出力')
+print(distance_p)
 
 
 # WordNet内に登録されている単語のみ出力
