@@ -66,7 +66,7 @@ x29 = X[29] # タイマ残り時間表示
 
 
 # コサイン類似度（正規化）
-print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x20), evaluate.vector_normalized(x21)))
+print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x23), evaluate.vector_normalized(x0)))
 
 # # コサイン類似度結果(上位語,下位語)
 # cos_sim_l = [[0.9619423890352065,('状態表示','ロックランプ')],
