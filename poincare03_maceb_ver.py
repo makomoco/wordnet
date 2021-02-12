@@ -103,24 +103,24 @@ bb_1 = aa_1.tolist()
 # print(bb_3)
 
 
-avg_x = bb_1[0]
-avg_y = bb_1[1]
+# avg_x = bb_1[0]
+# avg_y = bb_1[1]
 
-avg = [avg_x,avg_y]
+# avg = [avg_x,avg_y]
 
-print('平均ベクトルを算出')
-print(avg)
+# print('平均ベクトルを算出')
+# print(avg)
 
-# np配列化
-avg_np = np.array(avg)
-print(avg_np)
-# 距離計算
-distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
-                                    # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
-d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
-distance_p = np.arccosh(d_p) 
-print('距離を出力')
-print(distance_p)
+# # np配列化
+# avg_np = np.array(avg)
+# print(avg_np)
+# # 距離計算
+# distance = np.linalg.norm(avg_np) # l3_l2_and_list内の全単語について原点からの距離を計算（ユークリッド距離）
+#                                     # ユークリッド距離で計算して良い（https://ja.wikipedia.org/wiki/ポワンカレの円板モデル　参照）
+# d_p = 1 + 2 * ((distance**2) / (1 - (distance**2))) #arccoshの中身
+# distance_p = np.arccosh(d_p) 
+# print('距離を出力')
+# print(distance_p)
 
 
 # WordNet内に登録されている単語のみ出力
@@ -227,14 +227,23 @@ distance_and_word_list_hukugougo = [[0.7861080035099905,'状態表示'],
                                     [0.6534839647192356,'水位センサ'],
                                     [1.3134649070610038,'エラー検知'],
                                     [1.3369774421893466,'高温エラー'],
-                                    [2.231547416467637,'分追加']]
+                                    [2.231547416467637,'分追加'],
+                                    
+                                    [1.3666096057662007,'話題沸騰ポッド'],
+                                    [10.865965384683113,'サーミスタ'],
+                                    [10.661840614153787,'ヒータ'],
+                                    [5.092882262305476,'キッチンタイマ'],
+                                    [5.243500608698018,'タイマ起動'],
+                                    [0.27469868926116503,'タイマボタン'],
+                                    [0.6281366315386636,'タイマ残り時間表示']]
+
 
 # print('距離表示')
 # print(distance_and_word_list)
 
-# print('ソートした結果を表示')
-# distance_and_word_list_sorted = sorted(distance_and_word_list_hukugougo)
-# print(sorted(distance_and_word_list_hukugougo))
+print('ソートした結果を表示')
+distance_and_word_list_sorted = sorted(distance_and_word_list_hukugougo)
+print(sorted(distance_and_word_list_hukugougo))
 
 # print("WordNetに登録されている単語かどうか")
 # print('タイマ' in list_from_WordNet_2)
