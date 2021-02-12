@@ -66,7 +66,7 @@ x29 = X[29] # タイマ残り時間表示
 
 
 # コサイン類似度（正規化）
-print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x26), evaluate.vector_normalized(x27)))
+print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x26), evaluate.vector_normalized(x22)))
 
 # # コサイン類似度結果(上位語,下位語)
 # cos_sim_l = [[0.9619423890352065,('状態表示','ロックランプ')],
@@ -96,7 +96,7 @@ print(evaluate.cosine_similarity_normalized(evaluate.vector_normalized(x26), eva
 #             [-0.5543417225009764,(話題沸騰ポッド,キッチンタイマ)],
 #             [-0.7020955359832202,(センサ,サーミスタ)],
 #             [-0.72050828179146,(加熱,ヒータ)],
-#             [(キッチンタイマ,タイマ起動)],
+#             [0.9549913159713612,(キッチンタイマ,タイマ起動)],
 #             [(キッチンタイマ,分追加)],
 #             [(キッチンタイマ,タイマボタン)],
 #             [(キッチンタイマ,タイマ残り時間表示)]]
