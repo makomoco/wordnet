@@ -89,7 +89,7 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 ##########################################
 # 複合語の平均ベクトルを求める
 aa_1 = model.kv['タイマー']
-aa_2 = model.kv['起動']
+aa_2 = model.kv['ボタン']
 # aa_3 = model.kv['ポッド']
 # aa_4 = model.kv['表示']
 
