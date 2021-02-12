@@ -88,16 +88,16 @@ ls = [l for l in list_from_POL if l in list_from_WordNet_2]
 
 ##########################################
 # 複合語の平均ベクトルを求める
-aa_1 = model.kv['サーミスター']
-aa_2 = model.kv['タイマー']
+aa_1 = model.kv['ヒーター']
+# aa_2 = model.kv['']
 # # aa_3 = model.kv['テーブル']
 # # aa_4 = model.kv['方式']
 
 bb_1 = aa_1.tolist()
-bb_2 = aa_2.tolist()
+# bb_2 = aa_2.tolist()
 
 print(bb_1)
-print(bb_2)
+# print(bb_2)
 # # bb_3 = aa_3.tolist()
 # # bb_4 = aa_4.tolist()
 
